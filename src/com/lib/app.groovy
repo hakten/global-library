@@ -10,7 +10,7 @@ node {
         sh '''$(aws ecr get-login --no-include-email --region eu-west-1)'''
     }
     stage("push image"){
-        sh "docker push 103872286656.dkr.ecr.eu-west-1.amazonaws.com/apps/app_name:${APP_VERSION"
+            sh "docker push 103872286656.dkr.ecr.eu-west-1.amazonaws.com/apps/app_name:${APP_VERSION}"
     }
     stage("notify"){
         sh "echo Hello"   
